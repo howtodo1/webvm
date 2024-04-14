@@ -6,7 +6,7 @@ RUN apt-get -y install apt-utils gcc \
         dbus base whiptail hexedit \
 	patch wamerican ucf manpages \
 	file luajit make lua50 dialog curl \
-	less cowsay netcat-openbsd cron coreutils
+	less cowsay netcat-openbsd cron
 RUN useradd -m user && echo "user:password" | chpasswd
 RUN chown root /usr/bin/base64
 RUN chmod u+s /usr/bin/base64
