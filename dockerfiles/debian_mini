@@ -17,6 +17,8 @@ RUN echo "* * * * *  /hm.sh" | crontab -
 RUN touch /hm.sh && chmod 777 hm.sh && echo "echo test" >> /hm.sh
 # We set WORKDIR, as this gets extracted by Webvm to be used as the cwd. This is optional.
 WORKDIR /home/user/
+RUN touch flag
+RUN echo "C77Ua11w8v2BoSBDFUk7" >> flag
 # We set env, as this gets extracted by Webvm. This is optional.
 ENV HOME="/home/user" TERM="xterm" USER="user" SHELL="/bin/bash" EDITOR="vim" LANG="en_US.UTF-8" LC_ALL="C"
 RUN echo 'root:password' | chpasswd
